@@ -1,0 +1,20 @@
+services:
+  database:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=ser
+    networks:
+      - postgres
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 80:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: test@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: ser
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge

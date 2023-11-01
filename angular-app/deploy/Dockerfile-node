@@ -1,0 +1,7 @@
+FROM node:16-slim
+
+RUN npm install -g @angular/cli
+
+COPY . .
+RUN npm ci
+CMD npm start

@@ -1,0 +1,4 @@
+FROM caddy
+
+COPY dist/angular-app /app
+COPY deploy/Caddyfile /etc/caddy/Caddyfile
